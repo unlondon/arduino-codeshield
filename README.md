@@ -10,6 +10,7 @@ Maker Workshop series updated for the Arduino Code Sheild
 
 ### URLs
 
-http://codeshield.diyode.com/
-https://www.arduino.cc/en/main/software
+- http://codeshield.diyode.com/  
+- https://www.arduino.cc/en/main/software  
+- https://sparks.gogo.co.nz/ch340.html  
 
