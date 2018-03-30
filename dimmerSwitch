@@ -1,0 +1,38 @@
+#define ENCODER_A 14
+#define ENCODER_B 15
+#define ENCODER_PORT PINC
+#define SWITCH 13
+#define BUTTON 12
+#define RGB_RED 11
+#define RGB_GREEN 10
+#define RGB_BLUE 9
+#define LED 6
+#define SERVO 5
+#define PIEZO 3
+#define RELAY 2
+#define POT 2
+#define HALL 3
+#define THERMISTOR 4
+#define PHOTOCELL 5
+ 
+void setup () {
+  pinMode(SWITCH, INPUT);
+  pinMode(POT, INPUT);
+  pinMode(LED, OUTPUT);
+}
+ 
+void loop () {
+  // If the button is pressed
+  if ( digitalRead( BUTTON ) == LOW ) {
+    
+    // Read the current state of the potentiometer
+    int potVal = analogRead( POT );
+    
+    // Map the potentiometer's range of values to that of the led
+    int ledVal = map( potVal, 0, 1023, 0, 255 );
+    
+    analogWrite( LED, ledVal );
+    
+  }
+}
+	
